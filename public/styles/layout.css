@@ -1,0 +1,101 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+/* Util */
+.montserrat-bold {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+.ubuntu-regular {
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.ubuntu-normal {
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.ubuntu-bold {
+  font-family: "Ubuntu", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.roboto-condensed-bold {
+  font-family: "Roboto Condensed", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+.show-nav-menu {
+  transform: translateY(0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root > header {
+  padding: 1rem 3rem;
+  border-bottom: 2px solid rgb(127, 67, 187);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#root > header > a {
+  font-size: 22px;
+  text-decoration: none;
+  color: rgb(127, 67, 187);
+  span {
+    color: rgb(55, 55, 55);
+  }
+}
+#root > header > a:active {
+  color: rgb(55, 55, 55);
+  span:active {
+    color: rgb(127, 67, 187);
+  }
+}
+#root > header nav.navbar {
+  display: flex;
+  gap: 4rem;
+}
+#root > header nav.navbar a {
+  text-decoration: none;
+  font-size: 14px;
+  color: rgb(105, 105, 105);
+  transition: color 100ms ease-in;
+}
+#root > header nav.navbar a:hover {
+  color: rgb(55, 55, 55);
+}
+#root > header nav.nav-menu {
+  display: none;
+}
+#root > main {
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 3fr 1fr;
+}
+#root > main #content {
+  padding: 1rem;
+}
+#root > main #advertisements {
+  padding: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  .ad {
+    width: 100%;
+    height: 350px;
+    background: rgb(50, 111, 161);
+    font-size: 24px;
+    display: grid;
+    place-items: center;
+    color: white;
+  }
+}

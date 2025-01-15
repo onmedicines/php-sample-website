@@ -1,0 +1,127 @@
+@media screen and (max-width: 1024px) {
+  #root > header {
+    padding: 1rem 2rem;
+  }
+
+  #root > header nav {
+    gap: 2rem;
+  }
+
+  #root > main {
+    grid-template-columns: 1fr;
+  }
+
+  #root > main #advertisements {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 1rem;
+  }
+
+  #root > main #advertisements .ad {
+    min-width: 300px;
+    height: 250px;
+  }
+
+  #article > main article {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  #article > main article #sidebar {
+    order: -1;
+    border-left: none;
+    border-bottom: 2px solid rgb(226, 58, 192);
+    padding: 0 0 2rem 0;
+  }
+
+  #article > main article #sidebar h1 {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .show-nav-menu {
+    transform: translateY(0);
+  }
+  #root > header {
+    display: flex;
+    /* flex-direction: column; */
+    /* gap: 1rem; */
+    justify-content: space-between;
+    text-align: center;
+  }
+  #root > header > a {
+    align-self: flex-start;
+  }
+  #root > header nav.navbar {
+    display: none;
+  }
+  .nav-menu {
+    position: absolute;
+    /* top: 0; */
+    width: 100%;
+    /* transform: translateY(-100%); */
+    display: flex;
+    flex-direction: column;
+    transition: all 200ms ease-in;
+  }
+  .nav-menu a {
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(105, 105, 105);
+    display: block;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(127, 67, 187, 0.2);
+  }
+
+  #root > main {
+    padding: 1rem;
+  }
+
+  #article > nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #article > nav > a {
+    text-align: center;
+  }
+
+  #article > main {
+    padding: 1rem 0;
+  }
+
+  #article > main article #sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+  }
+
+  #article > main article #content p {
+    font-size: 1rem;
+  }
+
+  /* Make video container more compact on mobile */
+  #article > main article #content #video-container {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #root > header {
+    padding: 1rem;
+  }
+
+  #root > main {
+    padding: 0.5rem;
+  }
+
+  #article > main article #sidebar h1 {
+    font-size: 20px;
+  }
+
+  #root > main #advertisements .ad {
+    min-width: 250px;
+    height: 200px;
+    font-size: 20px;
+  }
+}
